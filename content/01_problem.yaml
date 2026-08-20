@@ -1,0 +1,24 @@
+slide_id: "01"
+title: "Il Problema: L'Incubo degli Indici 'Fatti a Mano'"
+category: "Contesto & Motivazione"
+
+column_left:
+  - type: "card"
+    variant: "rose"
+    title: "Hand-crafted Concurrent Indexes (Stato dell'Arte)"
+    items:
+      - "<b>Sincronizzazione Complessa:</b> Transizione da Lock Coupling a schemi Optimistic Lock Coupling (OLC) o Lock-Free con cicli di retry imprevedibili."
+      - "<b>Gestione Memoria Delicata:</b> Necessità di algoritmi come <i>Epoch-Based Reclamation (EBR)</i> o <i>Hazard Pointers</i>."
+      - "<b>Evoluzione Hardware:</b> Modifiche continue per adattarsi a NUMA, persistenze SSD/NVM o istruzioni atomiche hardware."
+
+  - type: "card"
+    variant: "amber"
+    title: "Il Prezzo della Complessità del Codice"
+    items:
+      - "Time-to-market lungo e curva di apprendimento ripida."
+      - "Codice difficile da debuttare e mantenere (alta Cognitive Complexity)."
+
+column_right:
+  - type: "diagram_box"
+    caption: "Confronto strutturale tra indici tradizionali e Tabular"
+    svg_type: "architectural_comparison"

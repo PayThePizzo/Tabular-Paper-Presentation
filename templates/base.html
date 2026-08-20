@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ config.meta.paper_title }}</title>
+    <style>
+        :root {
+            --primary: {{ config.theme.primary_color }};
+            --primary-light: {{ config.theme.primary_light }};
+            --secondary: {{ config.theme.secondary_color }};
+            --danger: {{ config.theme.danger_color }};
+            --bg-color: {{ config.theme.bg_color }};
+            --text-color: {{ config.theme.text_color }};
+        }
+        {{ css_content | safe }}
+    </style>
+</head>
+<body>
+    <!-- Title Slide -->
+    {% include "title_slide.html" %}
+
+    <!-- Content Slides -->
+    {% for slide in slides %}
+        {% include "slide.html" %}
+    {% endfor %}
+</body>
+</html>

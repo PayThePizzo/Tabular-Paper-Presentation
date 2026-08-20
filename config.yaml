@@ -1,0 +1,14 @@
+meta:
+  paper_title: "TABULAR: Efficiently Building Efficient Indexes"
+  subtitle: "Revisiting 'Objects-on-DB' to Build High-Performance Concurrent & Persistent Indexes with Ease"
+  conference: "PVLDB 2025"
+  organization: "Simon Fraser University"
+  authors: "Ziyi Yan, Mohamed Farouk Drira, Tianxun Hu, Tianzheng Wang"
+
+theme:
+  primary_color: "#0f766e"      # Teal scuro Typst
+  primary_light: "#f0fdfa"      # Teal chiarissimo
+  secondary_color: "#d97706"    # Amber / Arancione
+  danger_color: "#e11d48"       # Rose / Rosso errori
+  bg_color: "#fcfbf9"           # Sfondo carta / Typst cream
+  text_color: "#1e293b"         # Grigio scuro lettura

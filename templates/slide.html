@@ -1,0 +1,52 @@
+<div class="slide">
+    <div class="slide-header">
+        <div class="slide-header-left">
+            <span class="slide-num">{{ slide.slide_id }}</span>
+            <h2 class="slide-title">{{ slide.title }}</h2>
+        </div>
+        <div class="slide-header-right">{{ slide.category }}</div>
+    </div>
+
+    <div class="col-layout">
+        <!-- Colonna Sinistra -->
+        <div class="col-50">
+            {% for block in slide.column_left %}
+                {% if block.type == "card" %}
+                    <div class="card card-{{ block.variant }}">
+                        <div class="card-title">{{ block.title }}</div>
+                        <div class="card-body">
+                            <ul class="styled-list">
+                                {% for item in block.items %}
+                                    <li>{{ item | safe }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <!-- Colonna Destra -->
+        <div class="col-50">
+            {% for block in slide.column_right %}
+                {% if block.type == "card" %}
+                    <div class="card card-{{ block.variant }}">
+                        <div class="card-title">{{ block.title }}</div>
+                        <div class="card-body">
+                            <ul class="styled-list">
+                                {% for item in block.items %}
+                                    <li>{{ item | safe }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                {% elif block.type == "diagram_box" %}
+                    <div class="diagram-box">
+                        <!-- SVG / Diagram Injected Here -->
+                        <div class="diagram-caption">{{ block.caption }}</div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
